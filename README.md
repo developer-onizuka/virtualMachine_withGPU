@@ -195,11 +195,7 @@ Device 0: "Quadro P1000"
   GPU Max Clock rate:                            1481 MHz (1.48 GHz)
   Memory Clock rate:                             2505 Mhz
   Memory Bus Width:                              128-bit
-  L2 Cache Size:        3.スワップファイル削除
-241
-​
-242
-                         1048576 bytes
+  L2 Cache Size:                                 1048576 bytes
   Maximum Texture Dimension Size (x,y,z)         1D=(131072), 2D=(131072, 65536), 3D=(16384, 16384, 16384)
   Maximum Layered 1D Texture Size, (num) layers  1D=(32768), 2048 layers
   Maximum Layered 2D Texture Size, (num) layers  2D=(32768, 32768), 2048 layers
