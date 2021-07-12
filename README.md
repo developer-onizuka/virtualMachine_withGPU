@@ -195,7 +195,11 @@ Device 0: "Quadro P1000"
   GPU Max Clock rate:                            1481 MHz (1.48 GHz)
   Memory Clock rate:                             2505 Mhz
   Memory Bus Width:                              128-bit
-  L2 Cache Size:                                 1048576 bytes
+  L2 Cache Size:        3.スワップファイル削除
+241
+​
+242
+                         1048576 bytes
   Maximum Texture Dimension Size (x,y,z)         1D=(131072), 2D=(131072, 65536), 3D=(16384, 16384, 16384)
   Maximum Layered 1D Texture Size, (num) layers  1D=(32768), 2048 layers
   Maximum Layered 2D Texture Size, (num) layers  2D=(32768, 32768), 2048 layers
@@ -229,10 +233,42 @@ deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 11.4, CUDA Runtime Vers
 Result = PASS
 ```
 
-# 10. 
+# 10. Remove Swapfile (Optional)
+```
+$ sudo swapoff -v /swapfile
+$ sudo vi /etc/fstab 
+ comment out the line below:
+ "/swapfile swap swap defaults 0 0"
+$ sudo rm /swapfile
+```
+
+# 11. GPU testing
 ```
   $ sudo apt install nvidia-cuda-toolkit
   $ sudo apt install libssl-dev
   $ git clone https://github.com/developer-onizuka/vector.git
-  $ ./gcc.sh 
+  $ ./gcc.sh
+  $ time ./double_sqrt.co 134217728 |tail -n 5
+  output:    5.000
+  output:    5.000
+  output:    5.000
+  output:    5.000
+  output:    5.000
+
+  real	  0m38.429s
+  user	  0m22.688s
+  sys	  0m7.435s
+
+  $ od -F -Ad  double_a.bin 
+  0000000                        3                        3
+  *
+  1073741824
+  $ od -F -Ad  double_b.bin 
+  0000000                        4                        4
+  *
+  1073741824
+  $ od -F -Ad  double_c.bin 
+  0000000                        5                        5
+  *
+  1073741824
 ```
