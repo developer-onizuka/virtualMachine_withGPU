@@ -144,28 +144,17 @@ Running on...
  Host to Device Bandwidth, 1 Device(s)
  PINNED Memory Transfers
    Transfer Size (Bytes)	Bandwidth(GB/s)
-   32000000			12.5
+   32000000			12.8
 
  Device to Host Bandwidth, 1 Device(s)
  PINNED Memory Transfers
    Transfer Size (Bytes)	Bandwidth(GB/s)
-   32000000			12.7
+   32000000			13.0
 
  Device to Device Bandwidth, 1 Device(s)
  PINNED Memory Transfers
    Transfer Size (Bytes)	Bandwidth(GB/s)
-   32000000			69.4  350  git clone https://github.com/developer-onizuka/vector.git
-  351  ls
-  352  cd vector/
-  353  ls
-  354  cat gcc.sh 
-  355  nvcc
-  356  sudo apt install nvidia-cuda-tookit
-  357  sudo apt install nvidia-cuda-toolkit
-  358  ls
-  359  ./gcc.sh 
-  360  sudo apt install libssl-dev
-  361  ./gcc.sh 
+   32000000			69.4
 
 Result = PASS
 
