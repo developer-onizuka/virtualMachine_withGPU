@@ -154,7 +154,18 @@ Running on...
  Device to Device Bandwidth, 1 Device(s)
  PINNED Memory Transfers
    Transfer Size (Bytes)	Bandwidth(GB/s)
-   32000000			69.4
+   32000000			69.4  350  git clone https://github.com/developer-onizuka/vector.git
+  351  ls
+  352  cd vector/
+  353  ls
+  354  cat gcc.sh 
+  355  nvcc
+  356  sudo apt install nvidia-cuda-tookit
+  357  sudo apt install nvidia-cuda-toolkit
+  358  ls
+  359  ./gcc.sh 
+  360  sudo apt install libssl-dev
+  361  ./gcc.sh 
 
 Result = PASS
 
@@ -216,4 +227,12 @@ Device 0: "Quadro P1000"
 
 deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 11.4, CUDA Runtime Version = 11.4, NumDevs = 1
 Result = PASS
+```
+
+# 10. 
+```
+  $ sudo apt install nvidia-cuda-toolkit
+  $ sudo apt install libssl-dev
+  $ git clone https://github.com/developer-onizuka/vector.git
+  $ ./gcc.sh 
 ```
